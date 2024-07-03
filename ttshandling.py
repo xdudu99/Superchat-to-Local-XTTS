@@ -9,10 +9,10 @@ import pygame
 pygame.mixer.init()
 
 # Folder where the superchat text files are saved
-superchat_folder = 'C:/AllTalkTTS/superchats/txts/'
+superchat_folder = 'path/to/superchats/txts/' #<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< IMPORTANT
 
 # Folder where WAV files are saved
-output_folder = 'C:/AllTalkTTS/output/'
+output_folder = 'path/where/wavs/will/be/stored'#<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< IMPORTANT
 
 # Maximum number of superchat text files to keep
 max_superchat_files = 20  # Adjust this number as needed
@@ -64,7 +64,7 @@ def send_superchat_data(superchat_message, file_path):
     # Example: Constructing the POST body
     data = {
         'text': superchat_message,
-        'speaker_wav': 'arthur.wav',  # Replace with actual speaker WAV file or identifier
+        'speaker_wav': 'speaker.wav',  # Replace with actual speaker WAV file or identifier <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< IMPORTANT
         'language': detected_lang if detected_lang else 'en',  # Default to 'en' if language detection fails
         'file_name_or_path': f'superchat_{datetime.now().strftime("%Y%m%d_%H%M%S")}.wav' # Example file name
     }
